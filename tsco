@@ -1,0 +1,40 @@
+#1 ödev
+#basit
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+sum = a + b
+print("The sum of the two numbers is:", sum)
+
+#2 orta
+sum = 0
+for i in range(1, 101):
+    sum += i
+print("The sum of numbers from 1 to 100 is:", sum)
+
+#3 ileri
+def is_prime(n):
+    if n <= 1:
+        return False
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+n = int(input("Enter a number: "))
+if is_prime(n):
+    print(n, "is a prime number.")
+else:
+    print(n, "is not a prime number.")
+
+#4 zor
+def check_duplicates(array):
+    seen = set()
+    for item in array:
+        if item in seen:
+            return True
+        seen.add(item)
+    return False
+array = [1, 2, 3, 4, 5, 2] 
+if check_duplicates(array):
+    print("The array contains duplicate elements.")
+else:
+    print("The array does not contain duplicate elements.")
